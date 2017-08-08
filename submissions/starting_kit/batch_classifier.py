@@ -1,7 +1,7 @@
 from keras.models import Model
 from keras.layers import Input
 from keras.layers import Dense
-from keras.layers import Convolution2D
+from keras.layers import Conv2D
 from keras.layers import MaxPooling2D
 from keras.layers import Flatten
 from keras.optimizers import Adam
@@ -68,21 +68,21 @@ class BatchClassifier(object):
     def _build_model(self):
         inp = Input((3, 32, 32))
         # Block 1
-        x = Convolution2D(
-            32, (3, 3), activation='relu', border_mode='same',
+        x = Conv2D(
+            32, (3, 3), activation='relu', padding='same',
             name='block1_conv1')(inp)
-        x = Convolution2D(
-            32, (3, 3), activation='relu', border_mode='same',
+        x = Conv2D(
+            32, (3, 3), activation='relu', padding='same',
             name='block1_conv2')(x)
         x = MaxPooling2D(
             (2, 2), strides=(2, 2),
             name='block1_pool')(x)
         # Block 2
-        x = Convolution2D(
-            64, (3, 3), activation='relu', border_mode='same',
+        x = Conv2D(
+            64, (3, 3), activation='relu', padding='same',
             name='block2_conv1')(x)
-        x = Convolution2D(
-            64, (3, 3), activation='relu', border_mode='same',
+        x = Conv2D(
+            64, (3, 3), activation='relu', padding='same',
             name='block2_conv2')(x)
         x = MaxPooling2D(
             (2, 2), strides=(2, 2),
