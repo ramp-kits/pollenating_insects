@@ -3,7 +3,7 @@ import pandas as pd
 import rampwf as rw
 from sklearn.model_selection import StratifiedShuffleSplit
 
-problem_title = 'Pollenating insect classification (18 classes)
+problem_title = 'Pollenating insect classification (18 classes)'
 _target_column_name = 'class'
 _prediction_label_names = range(0, 18)
 # A type (class) which will be used to create wrapper objects for y_pred
