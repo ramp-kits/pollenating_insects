@@ -14,3 +14,6 @@ for f_name in f_names:
     cmd = 'wget {} --output-document={} --no-check-certificate'.format(
         url_in, f_name_out)
     call(cmd, shell=True)
+
+os.chdir('data')
+call('unzip imgs.zip', shell=True)
