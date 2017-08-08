@@ -57,7 +57,6 @@ class BatchClassifier(object):
             # time using 1 worker (so `workers` have to be equal to 1), but
             # do this single chunk loading in parallel with joblib.
             workers=1,
-            use_multiprocessing=True,
             validation_data=gen_valid,
             validation_steps=get_nb_minibatches(nb_valid, batch_size),
             verbose=1)
