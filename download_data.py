@@ -7,7 +7,7 @@ if os.path.exists('data'):
 os.mkdir('data')
 
 url = 'https://storage.ramp.studio/pollenating_insects'
-f_names = ['class_codes.csv', 'test.csv', 'train.csv']
+f_names = ['class_codes.csv', 'test.csv', 'train.csv', 'imgs.zip']
 for f_name in f_names:
     url_in = '{}/{}'.format(url, f_name)
     f_name_out = os.path.join('data', f_name)
