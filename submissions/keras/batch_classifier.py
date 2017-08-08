@@ -108,3 +108,4 @@ class BatchClassifier(object):
         model.compile(
             loss='categorical_crossentropy', optimizer=Adam(lr=1e-4),
             metrics=['accuracy'])
+        return model
