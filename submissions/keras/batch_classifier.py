@@ -51,7 +51,7 @@ class BatchClassifier(object):
         x = Conv2D(
             128, (3, 3), activation='relu', padding='same',
             name='block2_conv2')(x)
-        x = Conv2D(
+        x = MaxPooling2D(
             (2, 2), strides=(2, 2),
             name='block2_pool')(x)
         # Block 3
