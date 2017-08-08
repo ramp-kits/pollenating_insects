@@ -17,3 +17,4 @@ for f_name in f_names:
 
 os.chdir('data')
 call('unzip imgs.zip', shell=True)
+os.rename('public_imgs', 'imgs')
