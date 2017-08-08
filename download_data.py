@@ -15,6 +15,6 @@ for f_name in f_names:
         url_in, f_name_out)
     call(cmd, shell=True)
 
-os.chdir('data')
-call('unzip imgs.zip', shell=True)
-os.rename('public_imgs', 'imgs')
+call('unzip data/imgs.zip', shell=True)
+os.rename('data_1/public_imgs', 'data/imgs')
+shutil.rmtree('data_1')
