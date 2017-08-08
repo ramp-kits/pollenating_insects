@@ -8,10 +8,7 @@ conda install --yes --quiet jupyter seaborn gitpython scikit-image
 conda install --yes --quiet cloudpickle, tensorflow, pytroch
 conda install -c conda-forge keras
 pip install joblib
+cd ..
 git clone https://github.com/paris-saclay-cds/ramp-workflow.git
 cd ramp-workflow
 python setup.py install
-cd ..
-git clone https://github.com/ramp-kits/pollenating_insects
-cd pollenating_insects
-python download_data.py
