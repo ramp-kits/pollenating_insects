@@ -36,59 +36,59 @@ class BatchClassifier(object):
         inp = Input((3, 64, 64))
         # Block 1
         x = Convolution2D(
-            64, 3, 3, activation='relu', border_mode='same',
+            64, (3, 3), activation='relu', border_mode='same',
             name='block1_conv1')(inp)
         x = Convolution2D(
-            64, 3, 3, activation='relu', border_mode='same',
+            64, (3, 3), activation='relu', border_mode='same',
             name='block1_conv2')(x)
         x = MaxPooling2D(
             (2, 2), strides=(2, 2),
             name='block1_pool')(x)
         # Block 2
         x = Convolution2D(
-            128, 3, 3, activation='relu', border_mode='same',
+            128, (3, 3), activation='relu', border_mode='same',
             name='block2_conv1')(x)
         x = Convolution2D(
-            128, 3, 3, activation='relu', border_mode='same',
+            128, (3, 3), activation='relu', border_mode='same',
             name='block2_conv2')(x)
         x = MaxPooling2D(
             (2, 2), strides=(2, 2),
             name='block2_pool')(x)
         # Block 3
         x = Convolution2D(
-            256, 3, 3, activation='relu', border_mode='same',
+            256, (3, 3), activation='relu', border_mode='same',
             name='block3_conv1')(x)
         x = Convolution2D(
-            256, 3, 3, activation='relu', border_mode='same',
+            256, (3, 3), activation='relu', border_mode='same',
             name='block3_conv2')(x)
         x = Convolution2D(
-            256, 3, 3, activation='relu', border_mode='same',
+            256, (3, 3), activation='relu', border_mode='same',
             name='block3_conv4')(x)
         x = MaxPooling2D(
             (2, 2), strides=(2, 2),
             name='block3_pool')(x)
         # Block 4
         x = Convolution2D(
-            512, 3, 3, activation='relu', border_mode='same',
+            512, (3, 3), activation='relu', border_mode='same',
             name='block4_conv1')(x)
         x = Convolution2D(
-            512, 3, 3, activation='relu', border_mode='same',
+            512, (3, 3), activation='relu', border_mode='same',
             name='block4_conv3')(x)
         x = Convolution2D(
-            512, 3, 3, activation='relu', border_mode='same',
+            512, (3, 3), activation='relu', border_mode='same',
             name='block4_conv4')(x)
         x = MaxPooling2D(
             (2, 2), strides=(2, 2),
             name='block4_pool')(x)
         # Block 5
         x = Convolution2D(
-            512, 3, 3, activation='relu', border_mode='same',
+            512, (3, 3), activation='relu', border_mode='same',
             name='block5_conv1')(x)
         x = Convolution2D(
-            512, 3, 3, activation='relu', border_mode='same',
+            512, (3, 3), activation='relu', border_mode='same',
             name='block5_conv3')(x)
         x = Convolution2D(
-            512, 3, 3, activation='relu', border_mode='same',
+            512, (3, 3), activation='relu', border_mode='same',
             name='block5_conv4')(x)
         x = MaxPooling2D(
             (2, 2), strides=(2, 2),
